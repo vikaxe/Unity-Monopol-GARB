@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movment : MonoBehaviour
 {
-    
+
     // Start is called before the first frame update
     //void Start()
     //{
@@ -17,17 +17,21 @@ public class Movment : MonoBehaviour
     public int steps;
     bool isMoving;
 
+    public List<Player> players = new List<Player>();
+    private int currentPlayerIndex = 0;
 
-        void Update()
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isMoving)// "Slår tärning när man trycker på space och inte redan rör på sig"
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !isMoving)// "Slår tärning när man trycker på space och inte redan rör på sig"
-            {
-                steps = Random.Range(1, 7);// Tärning - genererar ett slumptal mellan 1 och 6 (som en tärning) och lagrar det i 'steps'.
-                Debug.Log("Dice Rolled " + steps); // Skriver ut tärningens resultat i konsolen.
+            steps = Random.Range(1, 7);// Tärning - genererar ett slumptal mellan 1 och 6 (som en tärning) och lagrar det i 'steps'.
+            Debug.Log("Player " + (currentPlayerIndex + 1) + " rolled " + steps);// Skriver ut tärningens resultat i konsolen och vilken spelare.
 
-                StartCoroutine(Move()); // Startar rörelsen genom att använda en Coroutine för att undvika att blockera hela spelet.
-            }
+            StartCoroutine(Move()); // Startar rörelsen genom att använda en Coroutine för att undvika att blockera hela spelet.
         }
+    }
 
     IEnumerator Move()
     {
@@ -50,9 +54,13 @@ public class Movment : MonoBehaviour
             yield return new WaitForSeconds(0.1f);// Väntar i 0.1 sekunder mellan stegen.
             steps--; // Minskar antalet steg kvar att röra sig.
 
+            if (steps == 0)
+            {
+                isMoving = false;
+                currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;//byter till nästa spelare
+            }
 
         }
-        isMoving = false;// Sätter 'isMoving' tillbaka till false när rörelsen är klar.
     }
 
     bool MoveToNextNode(Vector3 goal)
