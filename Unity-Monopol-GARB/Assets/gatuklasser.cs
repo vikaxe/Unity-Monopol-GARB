@@ -17,10 +17,10 @@ public class gatuklasser : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Exempel: Köp en gata när spelaren trycker på mellanslagstangenten
-            blueStreet.BuyStreet(player);
+         //   blueStreet.BuyStreet(player);
         }
 
         // Uppdatera gränssnittet eller andra visuella element här
-        UpdateUI();
+        //UpdateUI();
     }
 }
