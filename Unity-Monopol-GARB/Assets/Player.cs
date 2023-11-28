@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
-
+    public int PlayerIndex { get; private set; }
     public string playerName;
     public bool isMoving;
+
+    public void InitializePlayer(int playerIndex, string name)
+    {
+        PlayerIndex = playerIndex;
+        playerName = name;
+        isMoving = false;
+        // Eventuell annan initialisering för spelaren
+    }
 }
