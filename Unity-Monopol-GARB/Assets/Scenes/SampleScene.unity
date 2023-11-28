@@ -393,13 +393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentRoute: {fileID: 1345629991}
   steps: 0
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
 --- !u!1 &174086278
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 178942936}
   - component: {fileID: 178942935}
   m_Layer: 0
-  m_Name: Fri parkering
+  m_Name: ' Parkeringing'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1936,13 +1936,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentRoute: {fileID: 1345629991}
   steps: 0
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
 --- !u!1 &1170886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,13 +3009,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentRoute: {fileID: 1345629991}
   steps: 0
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
 --- !u!1 &1458769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4430,13 +4430,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentRoute: {fileID: 1345629991}
   steps: 0
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
 --- !u!1 &2092919253
 GameObject:
   m_ObjectHideFlags: 0
