@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Monopoly
+
+
+public class Movment : MonoBehaviour
 {
     public class Movment : MonoBehaviour
     {
-        public List<Player> players; // Uppdaterat till att använda Player-klassen istället för GameObject
-        public List<Street> board; // Uppdaterat till att använda Street-klassen istället för GameObject
+        public List<Player> players; // Uppdaterat till att anvï¿½nda Player-klassen istï¿½llet fï¿½r GameObject
+        public List<Street> board; // Uppdaterat till att anvï¿½nda Street-klassen istï¿½llet fï¿½r GameObject
         public Route currentRoute;
         public int steps;
         private List<int> routePositions;
@@ -38,41 +40,41 @@ namespace Monopoly
                 initialPositions.Add(player.transform.position);
             }
 
-            // Skapa och initialisera gatorna här
+            // Skapa och initialisera gatorna hï¿½r
             board = new List<Street>
     {
-        new Street("Gå", 0), // Gå
+        new Street("Gï¿½", 0), // Gï¿½
         new Street("brun gata 1", 60),
-        new SpecialSquare("Allmänning"), // Allmänning
+        new SpecialSquare("Allmï¿½nning"), // Allmï¿½nning
         new Street("Brun gata 2", 80),
-        new Street("Ljusblå gata 1", 100), // Skeppsbron
+        new Street("Ljusblï¿½ gata 1", 100), // Skeppsbron
         new SpecialSquare("Chans"), // Chans
-        new Street("Ljusblå gata 2", 100),
-        new SpecialSquare("Ljusblå gata 3", 120),
-        new CornerSquare("Hörn"), // Fängelse
+        new Street("Ljusblï¿½ gata 2", 100),
+        new SpecialSquare("Ljusblï¿½ gata 3", 120),
+        new CornerSquare("Hï¿½rn"), // Fï¿½ngelse
         new Street("Rosa gata 1", 120),
         new Street("Rosa gata 2", 120),
         new Street("Rosa gata 3", 140),
         new Street("Orange gata 1", 140),
-        new SpecialSquare("Allmänning"), // Allmänning
+        new SpecialSquare("Allmï¿½nning"), // Allmï¿½nning
         new Street("Orange gata 2", 140),
         new Street("Orange gata 3", 160),
         new CornerSquare("fri parkering"),
-        new Street("Röd gata 1", 160),
+        new Street("Rï¿½d gata 1", 160),
         new SpecialSquare("Chans"), // Chans
-        new Street("Röd gata 2", 160),
-        new Street("Röd gata 3", 180),
+        new Street("Rï¿½d gata 2", 160),
+        new Street("Rï¿½d gata 3", 180),
         new Street("Gul gata 1", 160),
         new Street("Gul gata 2", 160),
         new Street("Gul gata 3", 180),
-        new CornerSquare("Gå till fängelse"), //fängelse
-        new Street("Grön gata 1", 200),
-        new Street("Grön gata 2", 200),
-        new SpecialSquare("Allmänning"), // Allmänning
-        new Street("Grön gata 3", 220),
+        new CornerSquare("Gï¿½ till fï¿½ngelse"), //fï¿½ngelse
+        new Street("Grï¿½n gata 1", 200),
+        new Street("Grï¿½n gata 2", 200),
+        new SpecialSquare("Allmï¿½nning"), // Allmï¿½nning
+        new Street("Grï¿½n gata 3", 220),
         new SpecialSquare("Chans"), // Chans
-        new Street("Blå gata 1", 350),
-        new Street("Blå gata 2", 400),
+        new Street("Blï¿½ gata 1", 350),
+        new Street("Blï¿½ gata 2", 400),
     };
         }
 

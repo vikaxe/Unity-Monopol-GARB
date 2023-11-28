@@ -4,9 +4,52 @@ using UnityEngine;
 
 namespace Monopoly
 {
-    public class gatuklasser : MonoBehaviour
+    public List<GameObject> gator;
+    // Start is called before the first frame update
+    void Start()
     {
-        public class Street
+        gator = new List<GameObject>
+        {
+            GameObject.Find("Go"),
+            GameObject.Find("Brun Gata 1"),
+            GameObject.Find("Allmï¿½nning 1"),
+            GameObject.Find("Brun Gata 2"),
+            GameObject.Find("Ljusblï¿½ Gata 1"),
+            GameObject.Find("Chans 1"),
+            GameObject.Find("Ljusblï¿½ Gata 2"),
+            GameObject.Find("Ljusblï¿½ Gata 3"),
+            GameObject.Find("Bara pï¿½ besï¿½k"),
+            GameObject.Find("Rï¿½sa Gata 1"),
+            GameObject.Find("Rï¿½sa Gata 2"),
+            GameObject.Find("Rï¿½sa Gata 3"),
+            GameObject.Find("Orange Gata 1"),
+            GameObject.Find("Allmï¿½nning 2"),
+            GameObject.Find("Orange Gata 2"),
+            GameObject.Find("Orange Gata 3"),
+            GameObject.Find("Parkeringing"),
+            GameObject.Find("Rï¿½d Gata 1"),
+            GameObject.Find("Chans 2"),
+            GameObject.Find("Rï¿½d Gata 2"),
+            GameObject.Find("Rï¿½d Gata 3"),
+            GameObject.Find("Gul Gata 1"),
+            GameObject.Find("Gul Gata 2"),
+            GameObject.Find("Gul Gata 3"),
+            GameObject.Find("Gï¿½ i fï¿½ngelse"),
+            GameObject.Find("Grï¿½n Gata 1"),
+            GameObject.Find("Grï¿½n Gata 2"),
+            GameObject.Find("Allmï¿½nning 3"),
+            GameObject.Find("Grï¿½n Gata 3"),
+            GameObject.Find("Chans 3"),
+            GameObject.Find("Blï¿½ Gata 1"),
+            GameObject.Find("Blï¿½ Gata 2"),
+        };
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Hantera spelarinput eller andra hï¿½ndelser hï¿½r
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             public string Name { get; private set; }
             public int Cost { get; private set; }
@@ -19,31 +62,31 @@ namespace Monopoly
 
             public virtual void LandOn(Player player)
             {
-                // Implementera logik för när en spelare landar på gatan
+                // Implementera logik fï¿½r nï¿½r en spelare landar pï¿½ gatan
             }
         }
         public class SpecialSquare : Street
         {
             public SpecialSquare(string name) : base(name, 0)
             {
-                // SpecialSquare kostar ingenting att köpa
+                // SpecialSquare kostar ingenting att kï¿½pa
             }
 
             public override void LandOn(Player player)
             {
-                // Implementera logik för när en spelare landar på Allmänning eller Chans
+                // Implementera logik fï¿½r nï¿½r en spelare landar pï¿½ Allmï¿½nning eller Chans
             }
         }
         public class CornerSquare : Street
         {
             public CornerSquare(string name) : base(name, 0)
             {
-                // CornerSquare kostar ingenting att köpa
+                // CornerSquare kostar ingenting att kï¿½pa
             }
 
             public override void LandOn(Player player)
             {
-                // Implementera logik för när en spelare landar på ett hörn
+                // Implementera logik fï¿½r nï¿½r en spelare landar pï¿½ ett hï¿½rn
             }
         }
 
@@ -56,7 +99,7 @@ namespace Monopoly
         // Update is called once per frame
         void Update()
         {
-            // Eventuell logik för Update-metoden
+            // Eventuell logik fï¿½r Update-metoden
         }
     }
 }

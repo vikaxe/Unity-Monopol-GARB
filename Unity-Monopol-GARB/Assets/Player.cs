@@ -13,6 +13,22 @@ public class Player : MonoBehaviour
         PlayerIndex = playerIndex;
         playerName = name;
         isMoving = false;
-        // Eventuell annan initialisering för spelaren
+        // Eventuell annan initialisering fï¿½r spelaren
     }
 }
+    public string playerName;
+    public bool isMoving;
+
+    public double cash = 1000;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    
