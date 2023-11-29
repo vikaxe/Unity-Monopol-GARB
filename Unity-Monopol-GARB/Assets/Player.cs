@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public int PlayerIndex { get; private set; }
     public string playerName;
     public bool isMoving;
+    public double cash = 1000;
 
     public void InitializePlayer(int playerIndex, string name)
     {
@@ -16,10 +17,8 @@ public class Player : MonoBehaviour
         // Eventuell annan initialisering f�r spelaren
     }
 }
-    public string playerName;
-    public bool isMoving;
 
-    public double cash = 1000;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,4 +30,5 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+    }
     

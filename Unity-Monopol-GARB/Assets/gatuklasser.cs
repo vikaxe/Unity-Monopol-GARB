@@ -65,6 +65,7 @@ namespace Monopoly
                 // Implementera logik f�r n�r en spelare landar p� gatan
             }
         }
+
         public class SpecialSquare : Street
         {
             public SpecialSquare(string name) : base(name, 0)
