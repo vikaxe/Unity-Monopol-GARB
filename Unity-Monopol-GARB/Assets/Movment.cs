@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class Movment : MonoBehaviour
+namespace Monopoly
 {
     public class Movment : MonoBehaviour
     {
@@ -21,12 +19,12 @@ public class Movment : MonoBehaviour
         {
             // Initialize players list or assign in the inspector
             players = new List<Player>
-        {
-            new Player { playerName = "Player1" },
-            new Player { playerName = "Player2" },
-            new Player { playerName = "Player3" },
-            new Player { playerName = "Player4" }
-        };
+            {
+                new Player { playerName = "Player1" },
+                new Player { playerName = "Player2" },
+                new Player { playerName = "Player3" },
+                new Player { playerName = "Player4" }
+            };
 
             routePositions = new List<int>(players.Count);
             for (int i = 0; i < players.Count; i++)
@@ -41,41 +39,41 @@ public class Movment : MonoBehaviour
             }
 
             // Skapa och initialisera gatorna h�r
-            board = new List<Street>
-    {
-        new Street("G�", 0), // G�
-        new Street("brun gata 1", 60),
-        new SpecialSquare("Allm�nning"), // Allm�nning
-        new Street("Brun gata 2", 80),
-        new Street("Ljusbl� gata 1", 100), // Skeppsbron
-        new SpecialSquare("Chans"), // Chans
-        new Street("Ljusbl� gata 2", 100),
-        new SpecialSquare("Ljusbl� gata 3", 120),
-        new CornerSquare("H�rn"), // F�ngelse
-        new Street("Rosa gata 1", 120),
-        new Street("Rosa gata 2", 120),
-        new Street("Rosa gata 3", 140),
-        new Street("Orange gata 1", 140),
-        new SpecialSquare("Allm�nning"), // Allm�nning
-        new Street("Orange gata 2", 140),
-        new Street("Orange gata 3", 160),
-        new CornerSquare("fri parkering"),
-        new Street("R�d gata 1", 160),
-        new SpecialSquare("Chans"), // Chans
-        new Street("R�d gata 2", 160),
-        new Street("R�d gata 3", 180),
-        new Street("Gul gata 1", 160),
-        new Street("Gul gata 2", 160),
-        new Street("Gul gata 3", 180),
-        new CornerSquare("G� till f�ngelse"), //f�ngelse
-        new Street("Gr�n gata 1", 200),
-        new Street("Gr�n gata 2", 200),
-        new SpecialSquare("Allm�nning"), // Allm�nning
-        new Street("Gr�n gata 3", 220),
-        new SpecialSquare("Chans"), // Chans
-        new Street("Bl� gata 1", 350),
-        new Street("Bl� gata 2", 400),
-    };
+            //board = new List<Street>
+            //{
+            //new Street("G�", 0), // G�
+            //new Street("brun gata 1", 60),
+            //new SpecialSquare("Allm�nning"), // Allm�nning
+            //new Street("Brun gata 2", 80),
+            //new Street("Ljusbl� gata 1", 100), // Skeppsbron
+            //new SpecialSquare("Chans"), // Chans
+            //new Street("Ljusbl� gata 2", 100),
+            //new SpecialSquare("Ljusbl� gata 3", 120),
+            //new CornerSquare("H�rn"), // F�ngelse
+            //new Street("Rosa gata 1", 120),
+            //new Street("Rosa gata 2", 120),
+            //new Street("Rosa gata 3", 140),
+            //new Street("Orange gata 1", 140),
+            //new SpecialSquare("Allm�nning"), // Allm�nning
+            //new Street("Orange gata 2", 140),
+            //new Street("Orange gata 3", 160),
+            //new CornerSquare("fri parkering"),
+            //new Street("R�d gata 1", 160),
+            //new SpecialSquare("Chans"), // Chans
+            //new Street("R�d gata 2", 160),
+            //new Street("R�d gata 3", 180),
+            //new Street("Gul gata 1", 160),
+            //new Street("Gul gata 2", 160),
+            //new Street("Gul gata 3", 180),
+            //new CornerSquare("G� till f�ngelse"), //f�ngelse
+            //new Street("Gr�n gata 1", 200),
+            //new Street("Gr�n gata 2", 200),
+            //new SpecialSquare("Allm�nning"), // Allm�nning
+            //new Street("Gr�n gata 3", 220),
+            //new SpecialSquare("Chans"), // Chans
+            //new Street("Blå gata 1", 350),
+            //new Street("Bl� gata 2", 400),
+            //};
         }
 
         void Update()
@@ -129,4 +127,5 @@ public class Movment : MonoBehaviour
         }
     }
 }
+    
 
