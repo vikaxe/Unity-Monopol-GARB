@@ -20,10 +20,10 @@ namespace Monopoly
             // Initialize players list or assign in the inspector
             players = new List<Player>
             {
-                new Player { playerName = "Player1" },
-                new Player { playerName = "Player2" },
-                new Player { playerName = "Player3" },
-                new Player { playerName = "Player4" }
+                GameObject.Find("Player1").GetComponent<Player>(),
+                GameObject.Find("Player2").GetComponent<Player>(),
+                GameObject.Find("Player3").GetComponent<Player>(),
+                GameObject.Find("Player4").GetComponent<Player>()
             };
 
             routePositions = new List<int>(players.Count);
@@ -74,6 +74,8 @@ namespace Monopoly
             //new Street("Blå gata 1", 350),
             //new Street("Bl� gata 2", 400),
             //};
+
+           
         }
 
         void Update()

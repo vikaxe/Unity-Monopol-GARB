@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class buy : MonoBehaviour
+public class Buy : MonoBehaviour
 {
     public GameObject buyWindow;
     public Text promptText;
@@ -14,7 +11,7 @@ public class buy : MonoBehaviour
 
     void Start()
     {
-        buyWindow.SetActive(false);
+        CloseBuyWindow();
     }
 
     public void LandOnStreet(GameObject player, GameObject street)
@@ -22,35 +19,36 @@ public class buy : MonoBehaviour
         currentPlayer = player;
         currentStreet = street;
 
-        // Check if the street is owned by someone
         Player owner = currentStreet.GetComponent<Street>().Owner;
 
         if (owner == null)
         {
-            // The street is not owned, prompt the player to buy it
-            promptText.text = "Do you want to buy this street? Press 'Y' for Yes, 'N' for No.";
-            buyWindow.SetActive(true);
+            SetPromptText("Do you want to buy this street? Press 'Y' for Yes, 'N' for No.");
+            OpenBuyWindow();
         }
         else
         {
-            // The street is owned, pay rent
-            // You can implement this logic here
             Debug.Log("Street is owned by: " + owner.playerName + ". Pay rent.");
         }
     }
 
     void Update()
     {
+        // Check for the 'E' key to show the buy window
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ShowBuyPrompt();
+        }
+
+        // Check for player input when the buy window is active
         if (buyWindow.activeSelf)
         {
-            // Handle player input for buying the street
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 BuyStreet();
             }
             else if (Input.GetKeyDown(KeyCode.N))
             {
-                // Player chooses not to buy the street
                 CloseBuyWindow();
             }
         }
@@ -58,16 +56,31 @@ public class buy : MonoBehaviour
 
     void BuyStreet()
     {
-        // Purchase the street
         currentStreet.GetComponent<Street>().SetOwner(currentPlayer.GetComponent<Player>());
         currentPlayer.GetComponent<Player>().cash -= currentStreet.GetComponent<Street>().purchasePrice;
-
-        // Close the buy window
         CloseBuyWindow();
+    }
+
+    void OpenBuyWindow()
+    {
+        buyWindow.SetActive(true);
     }
 
     void CloseBuyWindow()
     {
         buyWindow.SetActive(false);
+    }
+
+    void SetPromptText(string text)
+    {
+        promptText.text = text;
+    }
+
+    // Method to show the buy prompt without landing on a street
+    void ShowBuyPrompt()
+    {
+        // Customize the prompt message as needed
+        SetPromptText("Do you want to buy a street? Press 'Y' for Yes, 'N' for No. På skriv bordet");
+        OpenBuyWindow();
     }
 }

@@ -22,6 +22,7 @@ namespace Monopoly
 
         public class Street
         {
+
             public string Name { get; private set; }
             public int Cost { get; private set; }
 
@@ -62,6 +63,8 @@ namespace Monopoly
                 // Implementera logik för när en spelare landar på ett hörn
             }
         }
+
+       
     }
 }
 
