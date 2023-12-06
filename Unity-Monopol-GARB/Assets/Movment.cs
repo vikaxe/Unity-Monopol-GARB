@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Monopoly
 {
     public class Movment : MonoBehaviour
@@ -15,8 +16,12 @@ namespace Monopoly
         private int currentPlayerIndex = 0;
         private bool isMoving;
 
+        public Buy buyScript;
+
         void Start()
         {
+
+            buyScript = GetComponent<Buy>();
             // Initialize players list or assign in the inspector
             players = new List<Player>
             {
@@ -38,51 +43,54 @@ namespace Monopoly
                 initialPositions.Add(player.transform.position);
             }
 
-            // Skapa och initialisera gatorna h�r
-            //board = new List<Street>
-            //{
-            //new Street("G�", 0), // G�
-            //new Street("brun gata 1", 60),
-            //new SpecialSquare("Allm�nning"), // Allm�nning
-            //new Street("Brun gata 2", 80),
-            //new Street("Ljusbl� gata 1", 100), // Skeppsbron
-            //new SpecialSquare("Chans"), // Chans
-            //new Street("Ljusbl� gata 2", 100),
-            //new SpecialSquare("Ljusbl� gata 3", 120),
-            //new CornerSquare("H�rn"), // F�ngelse
-            //new Street("Rosa gata 1", 120),
-            //new Street("Rosa gata 2", 120),
-            //new Street("Rosa gata 3", 140),
-            //new Street("Orange gata 1", 140),
-            //new SpecialSquare("Allm�nning"), // Allm�nning
-            //new Street("Orange gata 2", 140),
-            //new Street("Orange gata 3", 160),
-            //new CornerSquare("fri parkering"),
-            //new Street("R�d gata 1", 160),
-            //new SpecialSquare("Chans"), // Chans
-            //new Street("R�d gata 2", 160),
-            //new Street("R�d gata 3", 180),
-            //new Street("Gul gata 1", 160),
-            //new Street("Gul gata 2", 160),
-            //new Street("Gul gata 3", 180),
-            //new CornerSquare("G� till f�ngelse"), //f�ngelse
-            //new Street("Gr�n gata 1", 200),
-            //new Street("Gr�n gata 2", 200),
-            //new SpecialSquare("Allm�nning"), // Allm�nning
-            //new Street("Gr�n gata 3", 220),
-            //new SpecialSquare("Chans"), // Chans
-            //new Street("Blå gata 1", 350),
-            //new Street("Bl� gata 2", 400),
-            //};
+            // Skapa och initialisera gatorna här
+            board = new List<Street>{
+                //kan behöva göra nya kalsser år sepcial rutor i framtiden
+                GameObject.Find("Go").GetComponent<Street>(),
+                GameObject.Find("Brun Gata 1").GetComponent<Street>(),
+                GameObject.Find("AllmÄnning").GetComponent<Street>(),
+                GameObject.Find("Brun Gata 2").GetComponent<Street>(),
+                GameObject.Find("Ljusblå Gata 1").GetComponent<Street>(),
+                GameObject.Find("Chans 1").GetComponent<Street>(),
+                GameObject.Find("Ljusblå Gata 2").GetComponent<Street>(),
+                GameObject.Find("Ljusblå Gata 3").GetComponent<Street>(),
+                GameObject.Find("Bara på besök").GetComponent<Street>(),
+                GameObject.Find("Råsa Gata 1").GetComponent<Street>(),
+                GameObject.Find("Råsa Gata 2").GetComponent<Street>(),
+                GameObject.Find("Råsa Gata 3").GetComponent<Street>(),
+                GameObject.Find("Orange Gata 1").GetComponent<Street>(),
+                GameObject.Find("Allmänning 2").GetComponent<Street>(),
+                GameObject.Find("Orange Gata 2").GetComponent<Street>(),
+                GameObject.Find("Orange Gata 3").GetComponent<Street>(),
+                GameObject.Find("Parkering").GetComponent<Street>(),
+                GameObject.Find("Röd Gata 1").GetComponent<Street>(),
+                GameObject.Find("Chans 2").GetComponent<Street>(),
+                GameObject.Find("Röd Gata 2").GetComponent<Street>(),
+                GameObject.Find("Röd Gata 3").GetComponent<Street>(),
+                GameObject.Find("Gul Gata 1").GetComponent<Street>(),
+                GameObject.Find("Gul Gata 2").GetComponent<Street>(),
+                GameObject.Find("Gul Gata 3").GetComponent<Street>(),
+                GameObject.Find("Gå till fängelse").GetComponent<Street>(),
+                GameObject.Find("Grön Gata 1").GetComponent<Street>(),
+                GameObject.Find("Grön Gata 2").GetComponent<Street>(),
+                GameObject.Find("Allmänning 3").GetComponent<Street>(),
+                GameObject.Find("Grön Gata 3").GetComponent<Street>(),
+                GameObject.Find("Chans 3").GetComponent<Street>(),
+                GameObject.Find("Blå Gata 1").GetComponent<Street>(),
+                GameObject.Find("Blå Gata 2").GetComponent<Street>(),
+            };
 
            
         }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
+            if (GameManager.gameState == GameManager.GameState.WaitingForPlayerInput)
             {
-                StartCoroutine(MovePlayer());
+                if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
+                {
+                    StartCoroutine(MovePlayer());
+                }
             }
         }
 
@@ -121,12 +129,16 @@ namespace Monopoly
                     isMoving = false;
                 }
             }
+
         }
 
         bool MoveToNextNode(Transform playerTransform, Vector3 goal)
         {
             return goal != (playerTransform.position = Vector3.MoveTowards(playerTransform.position, goal, 2f * Time.deltaTime));
         }
+
+
+       
     }
 }
     

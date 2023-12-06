@@ -1,7 +1,8 @@
+using Monopoly;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Buy : MonoBehaviour
+    public class Buy : MonoBehaviour
 {
     public GameObject buyWindow;
     public Text promptText;
@@ -9,9 +10,12 @@ public class Buy : MonoBehaviour
     private GameObject currentPlayer;
     private GameObject currentStreet;
 
+
+
     void Start()
     {
         CloseBuyWindow();
+
     }
 
     public void LandOnStreet(GameObject player, GameObject street)
@@ -35,29 +39,35 @@ public class Buy : MonoBehaviour
     void Update()
     {
         // Check for the 'E' key to show the buy window
-        if (Input.GetKeyDown(KeyCode.E))
+        if (GameManager.gameState == GameManager.GameState.WaitingForPlayerInput)
         {
-            ShowBuyPrompt();
-        }
-
-        // Check for player input when the buy window is active
-        if (buyWindow.activeSelf)
-        {
-            if (Input.GetKeyDown(KeyCode.Y))
+            // Check for the 'E' key to show the buy window
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                BuyStreet();
+                ShowBuyPrompt();
+                GameManager.gameState = GameManager.GameState.PlayerMoving; // Player is making a decision, disable others
             }
-            else if (Input.GetKeyDown(KeyCode.N))
+
+            // Check for player input when the buy window is active
+            if (buyWindow.activeSelf)
             {
-                CloseBuyWindow();
+                if (Input.GetKeyDown(KeyCode.Y))
+                {
+                    BuyStreet();
+                    GameManager.MoveToNextPlayer(); // Move to the next player after the decision
+                }
+                else if (Input.GetKeyDown(KeyCode.N))
+                {
+                    CloseBuyWindow();
+                    GameManager.MoveToNextPlayer(); // Move to the next player after the decision
+                }
             }
         }
     }
 
     void BuyStreet()
     {
-        currentStreet.GetComponent<Street>().SetOwner(currentPlayer.GetComponent<Player>());
-        currentPlayer.GetComponent<Player>().cash -= currentStreet.GetComponent<Street>().purchasePrice;
+        currentStreet.GetComponent<Street>().BuyStreet(currentPlayer.GetComponent<Player>());
         CloseBuyWindow();
     }
 
@@ -81,6 +91,7 @@ public class Buy : MonoBehaviour
     {
         // Customize the prompt message as needed
         SetPromptText("Do you want to buy a street? Press 'Y' for Yes, 'N' for No. På skriv bordet");
+
         OpenBuyWindow();
     }
 }
