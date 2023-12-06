@@ -402,6 +402,7 @@ MonoBehaviour:
   board: []
   currentRoute: {fileID: 1345629991}
   steps: 0
+  buyScript: {fileID: 0}
 --- !u!1 &174086278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2522,7 @@ MonoBehaviour:
   board: []
   currentRoute: {fileID: 1345629991}
   steps: 0
+  buyScript: {fileID: 0}
 --- !u!1 &1170886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,6 +3598,7 @@ MonoBehaviour:
   board: []
   currentRoute: {fileID: 1345629991}
   steps: 0
+  buyScript: {fileID: 0}
 --- !u!1 &1458769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,6 +5144,7 @@ MonoBehaviour:
   board: []
   currentRoute: {fileID: 1345629991}
   steps: 0
+  buyScript: {fileID: 0}
 --- !u!114 &1955242295
 MonoBehaviour:
   m_ObjectHideFlags: 0
