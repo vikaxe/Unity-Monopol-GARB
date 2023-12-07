@@ -51,6 +51,34 @@ namespace Monopoly
             }
         }
 
+        public class Allmänning : SpecialSquare
+        {
+            public Allmänning(string name) : base(name)
+            {
+                // Anpassade inställningar för Allmänning
+            }
+
+            public override void PerformAction(Player player)
+            {
+                // Implementera specifika åtgärder för Allmänning
+                // Exempel: Spelaren drar ett kort och gör något baserat på kortet
+            }
+        }
+
+        public class Chans : SpecialSquare
+        {
+            public Chans(string name) : base(name)
+            {
+                // Anpassade inställningar för Chans
+            }
+
+            public override void PerformAction(Player player)
+            {
+                // Implementera specifika åtgärder för Chans
+                // Exempel: Spelaren drar ett slumpmässigt "Chans"-kort och agerar baserat på kortet
+            }
+        }
+
         public class CornerSquare : Street
         {
             public CornerSquare(string name) : base(name, 0)
