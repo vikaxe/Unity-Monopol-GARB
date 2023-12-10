@@ -6,20 +6,6 @@ namespace Monopoly
 {
     public class gatuklasser : MonoBehaviour
     {
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-            // Hantera spelarinput eller andra händelser här
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                // Utför handlingar när space trycks ned
-            }
-        }
-
         public class Street
         {
 
@@ -58,11 +44,11 @@ namespace Monopoly
                 // Anpassade inställningar för Allmänning
             }
 
-            public override void PerformAction(Player player)
-            {
+            //public override void PerformAction(Player player)
+            //{
                 // Implementera specifika åtgärder för Allmänning
                 // Exempel: Spelaren drar ett kort och gör något baserat på kortet
-            }
+            //}
         }
 
         public class Chans : SpecialSquare
@@ -72,11 +58,11 @@ namespace Monopoly
                 // Anpassade inställningar för Chans
             }
 
-            public override void PerformAction(Player player)
-            {
+            //public override void PerformAction(Player player)
+            //{
                 // Implementera specifika åtgärder för Chans
                 // Exempel: Spelaren drar ett slumpmässigt "Chans"-kort och agerar baserat på kortet
-            }
+            //}
         }
 
         public class CornerSquare : Street

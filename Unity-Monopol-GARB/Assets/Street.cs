@@ -5,21 +5,7 @@ using Monopoly;
 
 public class Street : MonoBehaviour
 
-
-    //Enskilda gator
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public Player Owner;
     public double purchasePrice = 200; // You can adjust the purchase price as needed
 
@@ -40,5 +26,7 @@ public class Street : MonoBehaviour
         {
             Debug.Log(gameObject.name + " is already owned by " + Owner.playerName + ".");
         }
+
+        
     }
 }

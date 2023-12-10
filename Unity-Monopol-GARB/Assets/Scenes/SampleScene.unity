@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2564775}
   - component: {fileID: 2564774}
   m_Layer: 0
-  m_Name: Brun Gata 2
+  m_Name: Brun2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +343,6 @@ GameObject:
   m_Component:
   - component: {fileID: 69972687}
   - component: {fileID: 69972689}
-  - component: {fileID: 69972690}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Untagged
@@ -382,27 +381,6 @@ MonoBehaviour:
   playerName: Player4
   isMoving: 0
   cash: 1000
---- !u!114 &69972690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69972686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
-  board: []
-  currentRoute: {fileID: 1345629991}
-  steps: 0
-  buyScript: {fileID: 0}
 --- !u!1 &174086278
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +394,7 @@ GameObject:
   - component: {fileID: 174086281}
   - component: {fileID: 174086280}
   m_Layer: 0
-  m_Name: "Allm\xE4nning 1"
+  m_Name: "Allm\xE4nning1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +499,7 @@ GameObject:
   - component: {fileID: 178942936}
   - component: {fileID: 178942935}
   m_Layer: 0
-  m_Name: ' Parkeringing'
+  m_Name: Parkeringing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2030,7 +2008,7 @@ GameObject:
   - component: {fileID: 780520747}
   - component: {fileID: 780520746}
   m_Layer: 0
-  m_Name: Brun Gata 1
+  m_Name: Brun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2227,6 +2205,88 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994637611}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1025751679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025751683}
+  - component: {fileID: 1025751682}
+  - component: {fileID: 1025751681}
+  - component: {fileID: 1025751680}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025751680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025751679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d25477b5fbd0d47a2dd16d9376631c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyWindow: {fileID: 654018578}
+  promptText: {fileID: 179692746}
+--- !u!114 &1025751681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025751679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 1955242293}
+  - {fileID: 1160398723}
+  - {fileID: 1430276239}
+  - {fileID: 69972689}
+  currentRoute: {fileID: 1345629991}
+  steps: 0
+--- !u!114 &1025751682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025751679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134f35fe674fa0940b329ba57fbc443a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: []
+  buyScript: {fileID: 1025751680}
+  movementScript: {fileID: 1025751681}
+--- !u!4 &1025751683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025751679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -408.95453, y: -441.94748, z: 468.75708}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131093809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,7 +2523,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1160398722}
   - component: {fileID: 1160398723}
-  - component: {fileID: 1160398724}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -2502,27 +2561,6 @@ MonoBehaviour:
   playerName: Player2
   isMoving: 0
   cash: 1000
---- !u!114 &1160398724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160398721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
-  board: []
-  currentRoute: {fileID: 1345629991}
-  steps: 0
-  buyScript: {fileID: 0}
 --- !u!1 &1170886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2893,7 @@ Transform:
   m_GameObject: {fileID: 1324362464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 4.02}
   m_LocalScale: {x: 1, y: 0.001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3539,7 +3577,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1430276237}
   - component: {fileID: 1430276239}
-  - component: {fileID: 1430276240}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Untagged
@@ -3578,27 +3615,6 @@ MonoBehaviour:
   playerName: Player3
   isMoving: 0
   cash: 1000
---- !u!114 &1430276240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430276236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
-  board: []
-  currentRoute: {fileID: 1345629991}
-  steps: 0
-  buyScript: {fileID: 0}
 --- !u!1 &1458769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,8 +5100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1955242292}
   - component: {fileID: 1955242293}
-  - component: {fileID: 1955242294}
-  - component: {fileID: 1955242295}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -5124,41 +5138,6 @@ MonoBehaviour:
   playerName: Player1
   isMoving: 1
   cash: 1000
---- !u!114 &1955242294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955242290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e130c70dbde65204f8d1d21a7bd13ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1955242293}
-  - {fileID: 1160398723}
-  - {fileID: 1430276239}
-  - {fileID: 69972689}
-  board: []
-  currentRoute: {fileID: 1345629991}
-  steps: 0
-  buyScript: {fileID: 0}
---- !u!114 &1955242295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955242290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d25477b5fbd0d47a2dd16d9376631c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyWindow: {fileID: 654018578}
-  promptText: {fileID: 179692746}
 --- !u!1 &2092919253
 GameObject:
   m_ObjectHideFlags: 0
@@ -5277,3 +5256,4 @@ SceneRoots:
   - {fileID: 1430276237}
   - {fileID: 69972687}
   - {fileID: 654018582}
+  - {fileID: 1025751683}
