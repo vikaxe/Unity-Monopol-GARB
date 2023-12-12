@@ -16,6 +16,24 @@ public class Player : MonoBehaviour
         isMoving = false;
         // Eventuell annan initialisering f�r spelaren
     }
+
+    public void ResetToStart()
+    {
+        // Återställ spelaren till startpositionen
+        // Implementera logik för att sätta spelarens position till startpositionen
+    }
+
+    public void ResetMoney()
+    {
+        // Återställ spelarens pengar till startpengar
+        cash = 1000;
+    }
+
+    public void SellAllStreets()
+    {
+        // Sälj alla gator som spelaren äger
+        // Implementera logik för att sälja gatorna
+    }
 }
 
 
