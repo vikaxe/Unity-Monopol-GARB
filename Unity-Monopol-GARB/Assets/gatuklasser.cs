@@ -71,8 +71,8 @@ namespace Monopoly
             {
                 // Implementera specifika åtgärder för Allmänning
                 // Exempel: Spelaren drar ett kort och gör något baserat på kortet
-                Card drawnCard = DrawRandomCard();
-                drawnCard.PerformAction();
+                //Card drawnCard = DrawRandomCard();
+                //drawnCard.PerformAction();
             }
         }
 
@@ -87,8 +87,8 @@ namespace Monopoly
             {
                 // Implementera specifika åtgärder för Chans
                 // Exempel: Spelaren drar ett slumpmässigt "Chans"-kort och agerar baserat på kortet
-                Card drawnCard = DrawRandomCard();
-                drawnCard.PerformAction();
+                //Card drawnCard = DrawRandomCard();
+                //drawnCard.PerformAction();
             }
         }
 
@@ -118,7 +118,7 @@ namespace Monopoly
 
             public override void Execute(Player player)
             {
-                player.AddMoney(Amount);
+                //player.AddMoney(Amount);
                 // Implementera eventuella ytterligare åtgärder
             }
         }
@@ -134,7 +134,7 @@ namespace Monopoly
 
             public override void Execute(Player player)
             {
-                player.MoveForward(Steps);
+                //player.MoveForward(Steps);
                 // Implementera eventuella ytterligare åtgärder
             }
         }
@@ -146,20 +146,20 @@ namespace Monopoly
                 // Anpassade inställningar för återställningskortet
             }
 
-            public override void Execute(Player player, List<Street> ownedStreets)
-            {
+            //public override void Execute(Player player, List<Street> ownedStreets)
+            //{
                 // Återställ spelarens position till start
-                player.ResetPosition();
+                //player.ResetPosition();
 
                 // Återställ spelarens pengar till startpengar
-                player.ResetMoney();
+                //player.ResetMoney();
 
                 // Sälj alla gator som spelaren äger
-                foreach (var street in ownedStreets)
-                {
-                    street.SellStreet();
-                }
-            }
+                //foreach (var street in ownedStreets)
+                //{
+                //    street.SellStreet();
+                //}
+            //}
         }
 
         public class ChanceDeck
@@ -212,7 +212,7 @@ namespace Monopoly
             // Kort med högre sannolikhet bör läggas till fler gånger i listan
             possibleCards.Add(new CollectMoneyCard("Collect 300", 300));  // 5/10 sannolikhet
             possibleCards.Add(new MoveForwardCard("Move 2 steps", 2));      // 1/10 sannolikhet
-            possibleCards.Add(new SomeOtherCard("Some action"));           // Till exempel en annan typ av kort
+            //possibleCards.Add(new SomeOtherCard("Some action"));           // Till exempel en annan typ av kort
 
             // Slumpa ett index för att välja ett kort från listan
             int randomIndex = Random.Range(0, possibleCards.Count);

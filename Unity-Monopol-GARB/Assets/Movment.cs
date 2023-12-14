@@ -16,14 +16,6 @@ namespace Monopoly
 
         void Start()
         {
-            players = new List<Player>
-            {
-                GameObject.Find("Player1").GetComponent<Player>(),
-                GameObject.Find("Player2").GetComponent<Player>(),
-                GameObject.Find("Player3").GetComponent<Player>(),
-                GameObject.Find("Player4").GetComponent<Player>()
-            };
-
             routePositions = new List<int>(players.Count);
             for (int i = 0; i < players.Count; i++)
             {
