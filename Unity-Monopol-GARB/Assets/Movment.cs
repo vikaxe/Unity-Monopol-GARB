@@ -38,7 +38,7 @@ namespace Monopoly
             }
             else
             {
-                Debug.Log("Kna inte röra dig. Buy or rent window är kativ.");
+                Debug.Log("Kan inte röra dig. Buy eller rent window är kativ.");
             }
         }
 
@@ -76,7 +76,7 @@ namespace Monopoly
                     string stoppedNodeName = stoppedNode.name;
                     Debug.Log($"{currentPlayer.playerName} stanade vid node: {stoppedNodeName}");
 
-                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+                    
                     isMoving = false;
 
                     Street stoppedStreet = stoppedNode.GetComponent<Street>();
@@ -107,6 +107,7 @@ namespace Monopoly
                             buyScript.OpenRentWindow();
                         }
                     }
+                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
                 }
             }
         }

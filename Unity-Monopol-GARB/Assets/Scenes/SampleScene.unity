@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &53559185
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +320,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &69972686
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +413,7 @@ MonoBehaviour:
   playerName: Player4
   isMoving: 0
   cash: 1000
+  playerMaterial: {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
 --- !u!1 &171627718
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +625,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: 9c81caf0c8a63bc45966074f40b480f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -729,7 +730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: 7da6f5f683c83644e96121c81b77be60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -969,7 +970,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1013,7 +1014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &401105519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1377,7 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &483273492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1605,7 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &654018578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1786,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1829,7 +1830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &698262844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2014,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2057,7 +2058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &759495551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,7 +2212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: a41f24fb6b178e243b583f38cbac40f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2317,7 +2318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2361,7 +2362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &994637611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,7 +2438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: a41f24fb6b178e243b583f38cbac40f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2766,7 +2767,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 9c81caf0c8a63bc45966074f40b480f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2977,6 +2978,7 @@ MonoBehaviour:
   playerName: Player2
   isMoving: 0
   cash: 1000
+  playerMaterial: {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
 --- !u!1 &1170886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,7 +3055,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3097,7 +3099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1194098087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,7 +3175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: a41f24fb6b178e243b583f38cbac40f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3373,7 +3375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3417,7 +3419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1345629989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,7 +3673,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3715,7 +3717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1405716289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3793,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: 7da6f5f683c83644e96121c81b77be60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3897,7 +3899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3941,7 +3943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1413903030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,7 +4020,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4062,7 +4064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1430276236
 GameObject:
   m_ObjectHideFlags: 0
@@ -4111,6 +4113,7 @@ MonoBehaviour:
   playerName: Player3
   isMoving: 0
   cash: 1000
+  playerMaterial: {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
 --- !u!1 &1458769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4231,7 +4234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1529923253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +4580,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4621,7 +4624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1615981130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,7 +4701,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4742,7 +4745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1624065314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,7 +4782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 288.7, y: -4.1000366}
+  m_AnchoredPosition: {x: 288.69995, y: -4.100281}
   m_SizeDelta: {x: -855.4, y: -232.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624065316
@@ -4895,7 +4898,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 9c81caf0c8a63bc45966074f40b480f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5001,7 +5004,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5045,7 +5048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1697815758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,7 +5217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5258,7 +5261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1728271959
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,7 +5338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5379,7 +5382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1733162514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,7 +5458,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: 7da6f5f683c83644e96121c81b77be60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5561,7 +5564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  - {fileID: 2100000, guid: ca99db3b9aafa9c428290c9d58d9fee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5605,7 +5608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1787075125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5682,7 +5685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5726,7 +5729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1902731876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,7 +5912,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  - {fileID: 2100000, guid: 7da6f5f683c83644e96121c81b77be60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6120,6 +6123,7 @@ MonoBehaviour:
   playerName: Player1
   isMoving: 1
   cash: 1000
+  playerMaterial: {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
 --- !u!1 &2092919253
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,7 +6200,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  - {fileID: 2100000, guid: 99ce2c9f164635042bdb85165272bd0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6240,7 +6244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   purchasePrice: 200
-  streetName: 
+  defaultMaterial: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

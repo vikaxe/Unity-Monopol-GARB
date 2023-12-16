@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public string playerName;
     public bool isMoving;
     public int cash = 1000;
+    public Material playerMaterial;
 
     public void InitializePlayer(int playerIndex, string name)
     {
@@ -20,13 +21,14 @@ public class Player : MonoBehaviour
     public void DeductCash(int amount)
     {
         cash -= amount;
-
+        Debug.Log($"{playerName} deducted {amount} cash. Remaining cash: {cash}");
         // skapa koll om spelaren har tillräckligt med pengar senare
     }
 
     public void AddCash(int amount)
     {
         cash += amount;
+        Debug.Log($"{playerName} deducted {amount} cash. Remaining cash: {cash}");
     }
 
 

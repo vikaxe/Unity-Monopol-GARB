@@ -58,18 +58,13 @@ namespace Monopoly
         public void HandleBuyDecisionYES()
         {
             currentStreet.GetComponent<Street>().BuyStreet(currentPlayer.GetComponent<Player>());
-            Debug.Log("Pressed YES");
             CloseBuyWindow();
         }
 
         public void HandleBuyDecisionNO()
         {
-            Debug.Log("Pressed NO");
-
             buyWindow.transform.Find("Köpa gata UI").gameObject.SetActive(false);
             CloseBuyWindow();
-
-            GameManager.gameState = GameManager.GameState.WaitingForPlayerInput;
         }
 
         public void HandelBetalaHyra()
@@ -80,20 +75,19 @@ namespace Monopoly
             if (streetComponent != null && streetComponent.Owner != null)
             {
                 Player owner = streetComponent.Owner;
-                int rentAmount = 50; // You can set the rent amount as needed
+                int rentAmount = 50; 
 
-                // Deduct rent from the current player and add it to the owner's cash
                 currentPlayer.GetComponent<Player>().DeductCash(rentAmount);
-                owner.GetComponent<Player>().AddCash(rentAmount);
+                owner.AddCash(rentAmount);
 
                 Debug.Log($"{currentPlayer.GetComponent<Player>().playerName} paid {rentAmount} rent to {owner.playerName}.");
             }
+
             CloseRentWindow();
         }
 
         public void OpenBuyWindow()
         {
-
             buyWindow.transform.Find("Köpa gata UI").gameObject.SetActive(true);
             if (buyWindow != null)
             {
