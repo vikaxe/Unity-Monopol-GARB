@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 2564776}
   - component: {fileID: 2564775}
   - component: {fileID: 2564774}
+  - component: {fileID: 2564777}
   m_Layer: 0
   m_Name: Brun2
   m_TagString: Untagged
@@ -228,6 +229,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2564772}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2564777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &53559185
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +256,7 @@ GameObject:
   - component: {fileID: 53559189}
   - component: {fileID: 53559188}
   - component: {fileID: 53559187}
+  - component: {fileID: 53559190}
   m_Layer: 0
   m_Name: "Ljusbl\xE4 Gata 2"
   m_TagString: Untagged
@@ -333,6 +350,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53559185}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &53559190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53559185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &69972686
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "K\xF6p gatan \n\n"
+  m_Text: "Vill du k\xF6p gatan \n\n"
 --- !u!222 &179692747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -816,6 +848,7 @@ GameObject:
   - component: {fileID: 345926588}
   - component: {fileID: 345926587}
   - component: {fileID: 345926586}
+  - component: {fileID: 345926589}
   m_Layer: 0
   m_Name: "Ljusbl\xE4 Gata 3"
   m_TagString: Untagged
@@ -909,6 +942,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345926584}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &345926589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345926584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &401105519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1212,7 @@ GameObject:
   - component: {fileID: 445053014}
   - component: {fileID: 445053013}
   - component: {fileID: 445053012}
+  - component: {fileID: 445053015}
   m_Layer: 0
   m_Name: Orange Gata 1
   m_TagString: Untagged
@@ -1257,6 +1306,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445053010}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &445053015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445053010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &483273492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1440,7 @@ GameObject:
   - component: {fileID: 534073076}
   - component: {fileID: 534073075}
   - component: {fileID: 534073074}
+  - component: {fileID: 534073077}
   m_Layer: 0
   m_Name: "Bl\xE5 Gata 1"
   m_TagString: Untagged
@@ -1469,6 +1534,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534073072}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &534073077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534073072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &654018578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1561,7 @@ GameObject:
   - component: {fileID: 654018581}
   - component: {fileID: 654018580}
   - component: {fileID: 654018579}
+  - component: {fileID: 654018584}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1571,6 +1652,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &654018584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654018578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134f35fe674fa0940b329ba57fbc443a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: []
+  buyScript: {fileID: 0}
+  movementScript: {fileID: 0}
+  Route: {fileID: 0}
+  playerComponents: []
 --- !u!1 &673541852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1681,7 @@ GameObject:
   - component: {fileID: 673541856}
   - component: {fileID: 673541855}
   - component: {fileID: 673541854}
+  - component: {fileID: 673541857}
   m_Layer: 0
   m_Name: "Gr\xF6n Gata 1"
   m_TagString: Untagged
@@ -1676,6 +1775,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673541852}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &673541857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673541852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &698262844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1909,7 @@ GameObject:
   - component: {fileID: 747090773}
   - component: {fileID: 747090772}
   - component: {fileID: 747090771}
+  - component: {fileID: 747090774}
   m_Layer: 0
   m_Name: Orange Gata 2
   m_TagString: Untagged
@@ -1888,6 +2003,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747090769}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &747090774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747090769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &759495551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2213,7 @@ GameObject:
   - component: {fileID: 780520748}
   - component: {fileID: 780520747}
   - component: {fileID: 780520746}
+  - component: {fileID: 780520749}
   m_Layer: 0
   m_Name: Brun1
   m_TagString: Untagged
@@ -2176,6 +2307,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780520744}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &780520749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780520744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &994637611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,7 +2459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyWindow: {fileID: 654018578}
-  promptText: {fileID: 179692746}
 --- !u!114 &1025751681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,6 +2478,7 @@ MonoBehaviour:
   - {fileID: 69972689}
   currentRoute: {fileID: 1345629991}
   steps: 0
+  buyScript: {fileID: 1025751680}
 --- !u!114 &1025751682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2348,7 +2494,7 @@ MonoBehaviour:
   board: []
   buyScript: {fileID: 1025751680}
   movementScript: {fileID: 1025751681}
-  Route: {fileID: 0}
+  Route: {fileID: 1345629989}
   playerComponents: []
 --- !u!4 &1025751683
 Transform:
@@ -2557,7 +2703,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1140798798}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1025751680}
+        m_TargetAssemblyTypeName: Monopoly.Buy, Assembly-CSharp
+        m_MethodName: HandleBuyDecisionNO
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1140798798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +2814,7 @@ GameObject:
   - component: {fileID: 1170886232}
   - component: {fileID: 1170886231}
   - component: {fileID: 1170886230}
+  - component: {fileID: 1170886233}
   m_Layer: 0
   m_Name: "R\xE5sa Gata 2"
   m_TagString: Untagged
@@ -2749,6 +2908,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170886228}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1170886233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170886228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1194098087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +3134,7 @@ GameObject:
   - component: {fileID: 1324362468}
   - component: {fileID: 1324362467}
   - component: {fileID: 1324362466}
+  - component: {fileID: 1324362469}
   m_Layer: 0
   m_Name: "Gr\xF6n Gata 3"
   m_TagString: Untagged
@@ -3053,6 +3228,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324362464}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1324362469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324362464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1345629989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,6 +3432,7 @@ GameObject:
   - component: {fileID: 1399816695}
   - component: {fileID: 1399816694}
   - component: {fileID: 1399816693}
+  - component: {fileID: 1399816696}
   m_Layer: 0
   m_Name: "Bl\xE5 Gata 2"
   m_TagString: Untagged
@@ -3335,6 +3526,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399816691}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1399816696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399816691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1405716289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3658,7 @@ GameObject:
   - component: {fileID: 1411922657}
   - component: {fileID: 1411922656}
   - component: {fileID: 1411922655}
+  - component: {fileID: 1411922658}
   m_Layer: 0
   m_Name: "Gr\xF6n Gata 2"
   m_TagString: Untagged
@@ -3545,6 +3752,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411922653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1411922658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411922653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1413903030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,6 +3779,7 @@ GameObject:
   - component: {fileID: 1413903034}
   - component: {fileID: 1413903033}
   - component: {fileID: 1413903032}
+  - component: {fileID: 1413903035}
   m_Layer: 0
   m_Name: "R\xE5sa Gata 3"
   m_TagString: Untagged
@@ -3650,6 +3873,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413903030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1413903035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413903030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1430276236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,6 +3948,7 @@ GameObject:
   - component: {fileID: 1458769831}
   - component: {fileID: 1458769830}
   - component: {fileID: 1458769829}
+  - component: {fileID: 1458769832}
   m_Layer: 0
   m_Name: Orange Gata 3
   m_TagString: Untagged
@@ -3803,6 +4042,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458769827}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1458769832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458769827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1581466443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +4069,7 @@ GameObject:
   - component: {fileID: 1581466447}
   - component: {fileID: 1581466446}
   - component: {fileID: 1581466445}
+  - component: {fileID: 1581466448}
   m_Layer: 0
   m_Name: "R\xE5sa Gata 1"
   m_TagString: Untagged
@@ -3908,6 +4163,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581466443}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1581466448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581466443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1615981130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,6 +4190,7 @@ GameObject:
   - component: {fileID: 1615981134}
   - component: {fileID: 1615981133}
   - component: {fileID: 1615981132}
+  - component: {fileID: 1615981135}
   m_Layer: 0
   m_Name: "R\xF6d Gata 1"
   m_TagString: Untagged
@@ -4013,6 +4284,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615981130}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1615981135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615981130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1639930580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4130,6 +4416,7 @@ GameObject:
   - component: {fileID: 1651575829}
   - component: {fileID: 1651575828}
   - component: {fileID: 1651575827}
+  - component: {fileID: 1651575830}
   m_Layer: 0
   m_Name: "R\xF6d Gata 3"
   m_TagString: Untagged
@@ -4223,6 +4510,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651575825}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1651575830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651575825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1697815758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,6 +4629,7 @@ GameObject:
   - component: {fileID: 1703358543}
   - component: {fileID: 1703358542}
   - component: {fileID: 1703358541}
+  - component: {fileID: 1703358544}
   m_Layer: 0
   m_Name: "R\xF6d Gata 2"
   m_TagString: Untagged
@@ -4420,6 +4723,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703358539}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1703358544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703358539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1728271959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,6 +4750,7 @@ GameObject:
   - component: {fileID: 1728271963}
   - component: {fileID: 1728271962}
   - component: {fileID: 1728271961}
+  - component: {fileID: 1728271964}
   m_Layer: 0
   m_Name: "Ljusbl\xE5 Gata 1"
   m_TagString: Untagged
@@ -4525,6 +4844,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728271959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1728271964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728271959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1733162514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,6 +4976,7 @@ GameObject:
   - component: {fileID: 1767135825}
   - component: {fileID: 1767135824}
   - component: {fileID: 1767135823}
+  - component: {fileID: 1767135826}
   m_Layer: 0
   m_Name: Gul Gata 2
   m_TagString: Untagged
@@ -4735,6 +5070,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767135821}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1767135826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767135821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1787075125
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +5097,7 @@ GameObject:
   - component: {fileID: 1787075129}
   - component: {fileID: 1787075128}
   - component: {fileID: 1787075127}
+  - component: {fileID: 1787075130}
   m_Layer: 0
   m_Name: Gul Gata 1
   m_TagString: Untagged
@@ -4840,6 +5191,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787075125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1787075130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787075125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1 &1902731876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,7 +5500,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1951180187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1025751680}
+        m_TargetAssemblyTypeName: Monopoly.Buy, Assembly-CSharp
+        m_MethodName: HandleBuyDecisionYES
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1951180187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5233,6 +5611,7 @@ GameObject:
   - component: {fileID: 2092919257}
   - component: {fileID: 2092919256}
   - component: {fileID: 2092919255}
+  - component: {fileID: 2092919258}
   m_Layer: 0
   m_Name: Gul Gata 3
   m_TagString: Untagged
@@ -5326,6 +5705,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092919253}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2092919258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092919253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26795b2f7b3645948a1d25a3fa836a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
+  purchasePrice: 200
+  streetName: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

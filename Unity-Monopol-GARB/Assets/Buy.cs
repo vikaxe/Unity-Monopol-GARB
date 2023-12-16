@@ -8,7 +8,6 @@ namespace Monopoly
     public class Buy : MonoBehaviour
     {
         public GameObject buyWindow;
-        public Text promptText;
 
         private GameObject currentPlayer;
         private GameObject currentStreet;
@@ -20,39 +19,7 @@ namespace Monopoly
 
         void Update()
         {
-            if (GameManager.gameState == GameManager.GameState.WaitingForPlayerInput)
-            {
-                if (buyWindow.activeSelf)
-                {
-                    if (Input.GetKeyDown(KeyCode.Y))
-                    {
-                        Debug.Log("Pressed 'Y' inside Buy Window");
-                        BuyStreet();
-                        GameManager.MoveToNextPlayer();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.N))
-                    {
-                        Debug.Log("Pressed 'N' inside Buy Window");
-                        CloseBuyWindow();
-                        GameManager.MoveToNextPlayer();
-                    }
-                }
-                else
-                {
-                    // Check for the 'E' key to show the buy window
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        Debug.Log("Pressed 'E' to show Buy Prompt");
-                        ShowBuyPrompt();
-                        GameManager.gameState = GameManager.GameState.PlayerMoving;
-                    }
-                    else if (Input.GetKeyDown(KeyCode.R))
-                    {
-                        Debug.Log("Pressed 'R' to close Buy Window");
-                        CloseBuyWindow();
-                    }
-                }
-            }
+ 
         }
 
 
@@ -61,58 +28,75 @@ namespace Monopoly
             currentPlayer = player;
             currentStreet = street;
 
-            Player owner = currentStreet.GetComponent<Street>().Owner;
-
-            if (owner == null)
+            if (currentStreet != null)
             {
-                SetPromptText("Do you want to buy this street? Press 'Y' for Yes, 'N' for No.");
-                OpenBuyWindow();
+                Street streetComponent = currentStreet.GetComponent<Street>();
+
+                if (streetComponent != null)
+                {
+                    Player owner = streetComponent.Owner;
+
+                    if (owner == null)
+                    {
+                        OpenBuyWindow();
+                    }
+                    else
+                    {
+                        Debug.Log("Street is owned by: " + owner.playerName + ". Pay rent.");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("LandOnStreet: Street component is null for " + currentStreet.name);
+                }
             }
             else
             {
-                Debug.Log("Street is owned by: " + owner.playerName + ". Pay rent.");
+                Debug.LogError("LandOnStreet: street parameter is null!");
             }
+
         }
 
-        public void HandleBuyDecision()
+        public bool IsBuyWindowActive()
         {
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                BuyStreet();
-                GameManager.MoveToNextPlayer();
-            }
-            else if (Input.GetKeyDown(KeyCode.N))
-            {
-                CloseBuyWindow();
-                GameManager.MoveToNextPlayer();
-            }
+            return buyWindow.activeSelf;
         }
 
-        public void BuyStreet()
+        public void HandleBuyDecisionYES()
         {
             currentStreet.GetComponent<Street>().BuyStreet(currentPlayer.GetComponent<Player>());
+            Debug.Log("Pressed YES");
+        }
+
+        public void HandleBuyDecisionNO()
+        {
+            Debug.Log("Pressed NO");
+
+            buyWindow.transform.Find("Köpa gata UI").gameObject.SetActive(false);
             CloseBuyWindow();
+
+            GameManager.gameState = GameManager.GameState.WaitingForPlayerInput;
         }
 
         public void OpenBuyWindow()
         {
-            buyWindow.SetActive(true);
+
+            buyWindow.transform.Find("Köpa gata UI").gameObject.SetActive(true);
+            if (buyWindow != null)
+            {
+                buyWindow.SetActive(true);
+
+            }
         }
 
         public void CloseBuyWindow()
         {
-            buyWindow.SetActive(false);
+            if (buyWindow != null)
+            {
+                buyWindow.SetActive(false);
+            }
         }
 
-        public void SetPromptText(string text)
-        {
-            promptText.text = text;
-        }
 
-        public void ShowBuyPrompt()
-        {
-            SetPromptText("Do you want to buy a street? Press 'Y' for Yes, 'N' for No. På skriv bordet");
-            OpenBuyWindow();
-        }
     }
 }

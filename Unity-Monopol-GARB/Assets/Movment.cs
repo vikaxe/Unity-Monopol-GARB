@@ -13,6 +13,7 @@ namespace Monopoly
         private int currentPlayerIndex = 0;
         private bool isMoving;
         public int steps;
+        public Buy buyScript;
 
         void Start()
         {
@@ -31,7 +32,14 @@ namespace Monopoly
 
         public void StartPlayerMovement()
         {
-            StartCoroutine(MovePlayer());
+            if (!buyScript.IsBuyWindowActive())
+            {
+                StartCoroutine(MovePlayer());
+            }
+            else
+            {
+                Debug.Log("Cannot move. Buy window is active.");
+            }
         }
 
         IEnumerator MovePlayer()
@@ -52,6 +60,7 @@ namespace Monopoly
                 routePositions[currentPlayerIndex] %= currentRoute.childNodeList.Count;
 
                 Vector3 nextPos = currentRoute.childNodeList[routePositions[currentPlayerIndex]].position;
+                
 
                 while (MoveToNextNode(currentPlayer.transform, nextPos))
                 {
@@ -63,8 +72,17 @@ namespace Monopoly
 
                 if (steps == 0)
                 {
+                    Transform stoppedNode = currentRoute.childNodeList[routePositions[currentPlayerIndex]];
+                    string stoppedNodeName = stoppedNode.name;
+                    Debug.Log($"{currentPlayer.playerName} stopped at node: {stoppedNodeName}");
+
                     currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
                     isMoving = false;
+
+                    buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
+
+                    // Open the buy window in the Buy script
+                    buyScript.OpenBuyWindow();
                 }
             }
         }

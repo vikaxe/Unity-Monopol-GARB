@@ -8,6 +8,7 @@ public class Street : MonoBehaviour
 {
     public Player Owner;
     public double purchasePrice = 200; // You can adjust the purchase price as needed
+    public string streetName;
 
     public void SetOwner(Player newOwner)
     {

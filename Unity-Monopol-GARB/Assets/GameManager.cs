@@ -64,30 +64,13 @@ namespace Monopoly
             {
                 HandleBuyDecision();
             }
-            else if (Input.GetKeyDown(KeyCode.R))
-            {
-                buyScript.CloseBuyWindow();
-            }
         }
 
         void HandleBuyDecision()
         {
             gameState = GameState.PlayerMoving;
-            buyScript.ShowBuyPrompt();
 
-            if (buyScript.buyWindow.activeSelf)
-            {
-                if (Input.GetKeyDown(KeyCode.Y))
-                {
-                    buyScript.BuyStreet();
-                    MoveToNextPlayer();
-                }
-                else if (Input.GetKeyDown(KeyCode.N))
-                {
-                    buyScript.CloseBuyWindow();
-                    MoveToNextPlayer();
-                }
-            }
+
         }
 
         public static Player GetCurrentPlayer()
