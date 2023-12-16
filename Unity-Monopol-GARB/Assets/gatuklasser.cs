@@ -13,22 +13,8 @@ namespace Monopoly
 
         void Update()
         {
-            // Hantera spelarinput eller andra händelser här
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                // Utför handlingar när space trycks ned
-                HandleSpacePressed();
-            }
         }
 
-        void HandleSpacePressed()
-        {
-            // Dra ett slumpmässigt kort från antingen Chans eller Allmänning
-            Card drawnCard = DrawRandomCard();
-
-            // Utför handlingen för det dragna kortet
-            //drawnCard.PerformAction();
-        }
 
         public class Street
         {
@@ -78,17 +64,20 @@ namespace Monopoly
 
         public class Chans : SpecialSquare
         {
-            public Chans(string name) : base(name)
+            private ChanceDeck chanceDeck; // Lägg till en referens till ChanceDeck
+
+            public Chans(string name, ChanceDeck chanceDeck) : base(name)
             {
                 // Anpassade inställningar för Chans
+                this.chanceDeck = chanceDeck;
             }
 
             public override void PerformAction(Player player)
             {
                 // Implementera specifika åtgärder för Chans
                 // Exempel: Spelaren drar ett slumpmässigt "Chans"-kort och agerar baserat på kortet
-                //Card drawnCard = DrawRandomCard();
-                //drawnCard.PerformAction();
+                Card drawnCard = chanceDeck.DrawRandomCard();
+                drawnCard.Execute(player);
             }
         }
 
@@ -200,25 +189,6 @@ namespace Monopoly
 
                 return drawnCard;
             }
-        }
-
-        // Metod för att dra ett slumpmässigt kort
-        private Card DrawRandomCard()
-        {
-            // Skapa en lista med möjliga kort
-            List<Card> possibleCards = new List<Card>();
-
-            // Lägg till kort med olika sannolikheter
-            // Kort med högre sannolikhet bör läggas till fler gånger i listan
-            possibleCards.Add(new CollectMoneyCard("Collect 300", 300));  // 5/10 sannolikhet
-            possibleCards.Add(new MoveForwardCard("Move 2 steps", 2));      // 1/10 sannolikhet
-            //possibleCards.Add(new SomeOtherCard("Some action"));           // Till exempel en annan typ av kort
-
-            // Slumpa ett index för att välja ett kort från listan
-            int randomIndex = Random.Range(0, possibleCards.Count);
-
-            // Returnera det dragna kortet
-            return possibleCards[randomIndex];
         }
     }
 }
