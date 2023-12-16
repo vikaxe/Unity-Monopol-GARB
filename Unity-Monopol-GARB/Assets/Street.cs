@@ -7,7 +7,7 @@ public class Street : MonoBehaviour
 
 {
     public Player Owner;
-    public double purchasePrice = 200; // You can adjust the purchase price as needed
+    public int purchasePrice = 200;
     public string streetName;
 
     public void SetOwner(Player newOwner)
@@ -21,11 +21,11 @@ public class Street : MonoBehaviour
         {
             SetOwner(currentPlayer);
             currentPlayer.cash -= purchasePrice;
-            Debug.Log(currentPlayer.playerName + " has bought " + gameObject.name + " for " + purchasePrice + " cash.");
+            Debug.Log(currentPlayer.playerName + " har köpt " + gameObject.name + " för " + purchasePrice + " kr.");
         }
         else
         {
-            Debug.Log(gameObject.name + " is already owned by " + Owner.playerName + ".");
+            Debug.Log(gameObject.name + " är redan ägd " + Owner.playerName + ".");
         }
 
         

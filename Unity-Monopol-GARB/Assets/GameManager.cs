@@ -80,7 +80,7 @@ namespace Monopoly
 
         public static void MoveToNextPlayer()
         {
-            currentPlayerIndex = (currentPlayerIndex + 1) % 4; // Assuming there are 4 players
+            currentPlayerIndex = (currentPlayerIndex + 1) % 4;
             gameState = GameState.WaitingForPlayerInput;
         }
 
@@ -88,7 +88,6 @@ namespace Monopoly
         {
             WaitingForPlayerInput,
             PlayerMoving,
-            // Add more states as needed
         }
     }
 }

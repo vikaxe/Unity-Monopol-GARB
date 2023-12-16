@@ -7,15 +7,28 @@ public class Player : MonoBehaviour
     public int PlayerIndex { get; private set; }
     public string playerName;
     public bool isMoving;
-    public double cash = 1000;
+    public int cash = 1000;
 
     public void InitializePlayer(int playerIndex, string name)
     {
         PlayerIndex = playerIndex;
         playerName = name;
         isMoving = false;
-        // Eventuell annan initialisering f�r spelaren
+
     }
+
+    public void DeductCash(int amount)
+    {
+        cash -= amount;
+
+        // skapa koll om spelaren har tillräckligt med pengar senare
+    }
+
+    public void AddCash(int amount)
+    {
+        cash += amount;
+    }
+
 
     public void ResetToStart()
     {
