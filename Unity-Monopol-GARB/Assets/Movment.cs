@@ -48,66 +48,75 @@ namespace Monopoly
             {
                 yield break;
             }
+
             isMoving = true;
 
             Player currentPlayer = players[currentPlayerIndex];
-            steps = Random.Range(1, 7);
-            Debug.Log($"{currentPlayer.playerName} rullade {steps}");
 
-            while (steps > 0)
+            // Här börjar ändringarna
+            if (currentPlayer.TurnsToSkip > 0)
             {
-                routePositions[currentPlayerIndex]++;
-                routePositions[currentPlayerIndex] %= currentRoute.childNodeList.Count;
+                currentPlayer.DecrementTurnsToSkip();
+                Debug.Log($"{currentPlayer.playerName} står över rundor. Resterande rundor att stå över: {currentPlayer.TurnsToSkip}");
+                currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+            }
+            else
+            {
+                steps = Random.Range(1, 7);
+                Debug.Log($"{currentPlayer.playerName} rullade {steps}");
 
-                Vector3 nextPos = currentRoute.childNodeList[routePositions[currentPlayerIndex]].position;
-                
-
-                while (MoveToNextNode(currentPlayer.transform, nextPos))
+                while (steps > 0)
                 {
-                    yield return null;
-                }
+                    routePositions[currentPlayerIndex]++;
+                    routePositions[currentPlayerIndex] %= currentRoute.childNodeList.Count;
 
-                yield return new WaitForSeconds(0.1f);
-                steps--;
+                    Vector3 nextPos = currentRoute.childNodeList[routePositions[currentPlayerIndex]].position;
 
-                if (steps == 0)
-                {
-                    Transform stoppedNode = currentRoute.childNodeList[routePositions[currentPlayerIndex]];
-                    string stoppedNodeName = stoppedNode.name;
-                    Debug.Log($"{currentPlayer.playerName} stanade vid node: {stoppedNodeName}");
-
-                    
-                    isMoving = false;
-
-                    Street stoppedStreet = stoppedNode.GetComponent<Street>();
-                    if (stoppedStreet != null)
+                    while (MoveToNextNode(currentPlayer.transform, nextPos))
                     {
-                        Player owner = stoppedStreet.Owner;
+                        yield return null;
+                    }
 
-                        if (owner == null)
+                    yield return new WaitForSeconds(0.1f);
+                    steps--;
+
+                    if (steps == 0)
+                    {
+                        Transform stoppedNode = currentRoute.childNodeList[routePositions[currentPlayerIndex]];
+                        string stoppedNodeName = stoppedNode.name;
+                        Debug.Log($"{currentPlayer.playerName} stanade vid node: {stoppedNodeName}");
+
+                        isMoving = false;
+
+                        Street stoppedStreet = stoppedNode.GetComponent<Street>();
+                        if (stoppedStreet != null)
                         {
+                            Player owner = stoppedStreet.Owner;
 
-                            buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
-                            buyScript.OpenBuyWindow();
-
-                            int streetCost = stoppedStreet.purchasePrice;
-                            int playerCash = currentPlayer.cash;
-
-                            if (playerCash < streetCost)
+                            if (owner == null)
                             {
-                                Debug.Log($"{currentPlayer.playerName} Inte tillräckligt med pengar. Nästa spelare.");
-                                currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+                                buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
+                                buyScript.OpenBuyWindow();
+
+                                int streetCost = stoppedStreet.purchasePrice;
+                                int playerCash = currentPlayer.cash;
+
+                                if (playerCash < streetCost)
+                                {
+                                    Debug.Log($"{currentPlayer.playerName} Inte tillräckligt med pengar. Nästa spelare.");
+                                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+                                    buyScript.CloseBuyWindow();
+                                }
+                            }
+                            if (owner != null)
+                            {
                                 buyScript.CloseBuyWindow();
+                                buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
+                                buyScript.OpenRentWindow();
                             }
                         }
-                        if (owner != null)
-                        {
-                            buyScript.CloseBuyWindow();
-                            buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
-                            buyScript.OpenRentWindow();
-                        }
+                        currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
                     }
-                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
                 }
             }
         }

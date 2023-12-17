@@ -98,6 +98,7 @@ namespace Monopoly
 
         public class CollectMoneyCard : Card
         {
+
             public int Amount { get; private set; }
 
             public CollectMoneyCard(string name, int amount) : base(name)
@@ -107,8 +108,8 @@ namespace Monopoly
 
             public override void Execute(Player player)
             {
-                //player.AddMoney(Amount);
-                // Implementera eventuella ytterligare åtgärder
+                player.AddMoney(Amount);
+                Debug.Log($"{player.playerName} erhåller {Amount} pengar.");
             }
         }
 
@@ -123,8 +124,8 @@ namespace Monopoly
 
             public override void Execute(Player player)
             {
-                //player.MoveForward(Steps);
-                // Implementera eventuella ytterligare åtgärder
+                player.MoveForward(Steps);
+                Debug.Log($"{player.playerName} moves {Steps} steps forward.");
             }
         }
 
@@ -135,20 +136,15 @@ namespace Monopoly
                 // Anpassade inställningar för återställningskortet
             }
 
-            //public override void Execute(Player player, List<Street> ownedStreets)
-            //{
-                // Återställ spelarens position till start
-                //player.ResetPosition();
+            public override void Execute(Player player)
+            {
 
-                // Återställ spelarens pengar till startpengar
-                //player.ResetMoney();
+                //Återställ spelarens pengar till startpengar
+                player.ResetMoney();
 
                 // Sälj alla gator som spelaren äger
-                //foreach (var street in ownedStreets)
-                //{
-                //    street.SellStreet();
-                //}
-            //}
+                player.SellAllStreets();
+            }
         }
 
         public class ChanceDeck
@@ -188,6 +184,82 @@ namespace Monopoly
                 cards.RemoveAt(randomIndex);
 
                 return drawnCard;
+            }
+        }
+
+        public class CornerSquare : Street
+        {
+            public CornerSquare(string name, int cost) : base(name, cost)
+            {
+                // Anpassade inställningar för hörnpositionen
+            }
+
+            public override void LandOn(Player player)
+            {
+                // Grundläggande åtgärder för hörnpositionen när en spelare landar på den
+            }
+        }
+
+        public class GoSquare : CornerSquare
+        {
+            public GoSquare(string name) : base(name, 0)
+            {
+                // Anpassade inställningar för Gå-rutan
+            }
+
+            public int goReward = 200; // Antal pengar spelaren får när de passerar Gå-rutan
+
+            // Metod som kallas när spelaren passerar Gå-rutan
+            public void HandleGo(Player player)
+            {
+                // Anropa AddMoney-metoden i Player-klassen för att ge spelaren pengar
+                player.AddMoney(goReward);
+
+                // Skriv ut information i loggen
+                Debug.Log($"{player.playerName} passerade Gå-rutan och erhöll {goReward} pengar.");
+            }
+        }
+
+        public class JailSquare : CornerSquare
+        {
+            public JailSquare(string name) : base(name, 0)
+            {
+                // Anpassade inställningar för Fängelserutan
+            }
+
+            public override void LandOn(Player player)
+            {
+                base.LandOn(player);
+                // Ingenting händer när du besöker fängelset
+            }
+        }
+
+        public class FreeParkingSquare : CornerSquare
+        {
+            public FreeParkingSquare(string name) : base(name, 0)
+            {
+                // Anpassade inställningar för Fri parkering-rutan
+            }
+
+            public override void LandOn(Player player)
+            {
+                base.LandOn(player);
+                // Ingenting händer på Fri parkering
+            }
+        }
+
+        public class GoToJailSquare : CornerSquare
+        {
+            public GoToJailSquare(string name) : base(name, 0)
+            {
+                // Anpassade inställningar för Gå i fängelse-rutan
+            }
+
+            public override void LandOn(Player player)
+            {
+                base.LandOn(player);
+                // Flytta spelaren till Fängelserutan (Bara på besök)
+                player.MoveToJail();
             }
         }
     }
