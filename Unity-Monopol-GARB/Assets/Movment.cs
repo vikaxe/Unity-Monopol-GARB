@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Monopoly.gatuklasser;
 
 namespace Monopoly
 {
@@ -14,6 +15,8 @@ namespace Monopoly
         private bool isMoving;
         public int steps;
         public Buy buyScript;
+        public GoSquare goSquare;
+
 
         void Start()
         {
@@ -28,6 +31,8 @@ namespace Monopoly
             {
                 initialPositions.Add(player.transform.position);
             }
+
+            goSquare = new GoSquare("Go");
         }
 
         public void StartPlayerMovement()
@@ -38,7 +43,7 @@ namespace Monopoly
             }
             else
             {
-                Debug.Log("Kan inte röra dig. Buy eller rent window är kativ.");
+                Debug.Log("Kan inte röra dig. Buy eller rent window är aktiv.");
             }
         }
 
@@ -62,7 +67,7 @@ namespace Monopoly
             }
             else
             {
-                steps = Random.Range(1, 7);
+                steps = 24; //Random.Range(1, 7);
                 Debug.Log($"{currentPlayer.playerName} rullade {steps}");
 
                 while (steps > 0)
@@ -71,6 +76,16 @@ namespace Monopoly
                     routePositions[currentPlayerIndex] %= currentRoute.childNodeList.Count;
 
                     Vector3 nextPos = currentRoute.childNodeList[routePositions[currentPlayerIndex]].position;
+
+                    if (nextPos == currentRoute.childNodeList[0].position)
+                    {
+                        goSquare.HandleGo(currentPlayer);
+                    }
+                    if (nextPos == currentRoute.childNodeList[24].position)
+                    {
+                        Debug.Log("Teast fängelse");
+                    }
+
 
                     while (MoveToNextNode(currentPlayer.transform, nextPos))
                     {
@@ -89,33 +104,35 @@ namespace Monopoly
                         isMoving = false;
 
                         Street stoppedStreet = stoppedNode.GetComponent<Street>();
-                        if (stoppedStreet != null)
-                        {
-                            Player owner = stoppedStreet.Owner;
 
-                            if (owner == null)
+                            if (stoppedStreet != null)
                             {
-                                buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
-                                buyScript.OpenBuyWindow();
+                                Player owner = stoppedStreet.Owner;
 
-                                int streetCost = stoppedStreet.purchasePrice;
-                                int playerCash = currentPlayer.cash;
-
-                                if (playerCash < streetCost)
+                                if (owner == null)
                                 {
-                                    Debug.Log($"{currentPlayer.playerName} Inte tillräckligt med pengar. Nästa spelare.");
-                                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
-                                    buyScript.CloseBuyWindow();
+                                    buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
+                                    buyScript.OpenBuyWindow();
+
+                                    int streetCost = stoppedStreet.purchasePrice;
+                                    int playerCash = currentPlayer.cash;
+
+                                    if (playerCash < streetCost)
+                                    {
+                                        Debug.Log($"{currentPlayer.playerName} Inte tillräckligt med pengar. Nästa spelare.");
+                                        currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+                                        buyScript.CloseBuyWindow();
+                                    }
                                 }
+                                if (owner != null)
+                                {
+                                    buyScript.CloseBuyWindow();
+                                    buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
+                                    buyScript.OpenRentWindow();
+                                }
+                            
                             }
-                            if (owner != null)
-                            {
-                                buyScript.CloseBuyWindow();
-                                buyScript.LandOnStreet(players[currentPlayerIndex].gameObject, stoppedNode.gameObject);
-                                buyScript.OpenRentWindow();
-                            }
-                        }
-                        currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+                     currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
                     }
                 }
             }

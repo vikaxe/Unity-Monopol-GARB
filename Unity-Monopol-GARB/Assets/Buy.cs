@@ -10,8 +10,8 @@ namespace Monopoly
         public GameObject buyWindow;
         public GameObject rentWindow;
 
-        private GameObject currentPlayer;
-        private GameObject currentStreet;
+        public GameObject currentPlayer;
+        public GameObject currentStreet;
 
         void Start()
         {

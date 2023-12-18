@@ -7,7 +7,7 @@ public class Street : MonoBehaviour
 
 {
     public Player Owner;
-    public int purchasePrice = 1000;
+    public int purchasePrice = 200;
     public Material defaultMaterial;
 
     public void SetOwner(Player newOwner)

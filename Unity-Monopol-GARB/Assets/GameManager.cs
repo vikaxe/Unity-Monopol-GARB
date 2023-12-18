@@ -27,6 +27,7 @@ namespace Monopoly
             int routeChildCount = Route.transform.childCount;
 
             // Log information about Route children
+            /*
             for (int i = 0; i < routeChildCount; i++)
             {
                 GameObject childObject = Route.transform.GetChild(i).gameObject;
@@ -40,6 +41,7 @@ namespace Monopoly
                 Debug.Log($"Initialized {playerName}");
                 
             }
+            */
         }
         
 

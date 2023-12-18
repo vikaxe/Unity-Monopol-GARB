@@ -6,16 +6,6 @@ namespace Monopoly
 {
     public class gatuklasser : MonoBehaviour
     {
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-        }
-
-
         public class Street
         {
             public string Name { get; private set; }
