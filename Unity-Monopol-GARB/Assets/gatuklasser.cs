@@ -177,22 +177,10 @@ namespace Monopoly
             }
         }
 
-        public class CornerSquare : Street
-        {
-            public CornerSquare(string name, int cost) : base(name, cost)
-            {
-                // Anpassade inställningar för hörnpositionen
-            }
 
-            public override void LandOn(Player player)
-            {
-                // Grundläggande åtgärder för hörnpositionen när en spelare landar på den
-            }
-        }
-
-        public class GoSquare : CornerSquare
+        public class GoSquare
         {
-            public GoSquare(string name) : base(name, 0)
+            public GoSquare(string name)
             {
                 // Anpassade inställningar för Gå-rutan
             }
@@ -210,48 +198,21 @@ namespace Monopoly
             }
         }
 
-        public class JailSquare : CornerSquare
+        public class FreeParkingSquare 
         {
-            public JailSquare(string name) : base(name, 0)
-            {
-                // Anpassade inställningar för Fängelserutan
-            }
-
-            public override void LandOn(Player player)
-            {
-                base.LandOn(player);
-                // Ingenting händer när du besöker fängelset
-            }
-        }
-
-        public class FreeParkingSquare : CornerSquare
-        {
-            public FreeParkingSquare(string name) : base(name, 0)
+            public FreeParkingSquare(string name)
             {
                 // Anpassade inställningar för Fri parkering-rutan
             }
 
-            public override void LandOn(Player player)
+            public  void LandOn(Player player)
             {
-                base.LandOn(player);
+                LandOn(player);
                 // Ingenting händer på Fri parkering
             }
         }
 
-        public class GoToJailSquare : CornerSquare
-        {
-            public GoToJailSquare(string name) : base(name, 0)
-            {
-                // Anpassade inställningar för Gå i fängelse-rutan
-            }
-
-            public override void LandOn(Player player)
-            {
-                base.LandOn(player);
-                // Flytta spelaren till Fängelserutan (Bara på besök)
-                player.MoveToJail();
-            }
-        }
+        
     }
 }
 

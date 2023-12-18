@@ -414,6 +414,8 @@ MonoBehaviour:
   isMoving: 0
   cash: 1000
   playerMaterial: {fileID: 2100000, guid: a94d1e8a6b8d38944a6a394fb7e644fc, type: 2}
+  currentRoute: {fileID: 0}
+  movementScript: {fileID: 0}
 --- !u!1 &171627718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buyWindow: {fileID: 654018578}
   rentWindow: {fileID: 654018578}
+  currentPlayer: {fileID: 0}
+  currentStreet: {fileID: 0}
 --- !u!114 &1025751681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2652,7 +2656,9 @@ MonoBehaviour:
   - {fileID: 1160398723}
   - {fileID: 1430276239}
   - {fileID: 69972689}
+  routePositions: 
   currentRoute: {fileID: 1345629991}
+  currentPlayerIndex: 0
   steps: 0
   buyScript: {fileID: 1025751680}
 --- !u!114 &1025751682
@@ -2979,6 +2985,8 @@ MonoBehaviour:
   isMoving: 0
   cash: 1000
   playerMaterial: {fileID: 2100000, guid: b776983ba4ccdab49aae23a50c9aa429, type: 2}
+  currentRoute: {fileID: 0}
+  movementScript: {fileID: 0}
 --- !u!1 &1170886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,6 +4122,8 @@ MonoBehaviour:
   isMoving: 0
   cash: 1000
   playerMaterial: {fileID: 2100000, guid: 805defeeebd5ed5419d54b95f4fe03b4, type: 2}
+  currentRoute: {fileID: 0}
+  movementScript: {fileID: 0}
 --- !u!1 &1458769827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4782,7 +4792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 288.69995, y: -4.100281}
+  m_AnchoredPosition: {x: 288.69995, y: -4.1003265}
   m_SizeDelta: {x: -855.4, y: -232.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624065316
@@ -5395,6 +5405,7 @@ GameObject:
   - component: {fileID: 1733162518}
   - component: {fileID: 1733162517}
   - component: {fileID: 1733162516}
+  - component: {fileID: 1733162519}
   m_Layer: 0
   m_Name: "G\xE5 i f\xE4ngelse"
   m_TagString: Untagged
@@ -5488,6 +5499,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733162514}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1733162519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733162514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c569c4a16a4518249a18a19c092cba79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1767135821
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6147,8 @@ MonoBehaviour:
   isMoving: 1
   cash: 1000
   playerMaterial: {fileID: 2100000, guid: a99f4967c02523c43b02814b72dd536a, type: 2}
+  currentRoute: {fileID: 0}
+  movementScript: {fileID: 0}
 --- !u!1 &2092919253
 GameObject:
   m_ObjectHideFlags: 0

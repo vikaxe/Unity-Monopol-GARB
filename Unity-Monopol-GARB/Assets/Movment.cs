@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Monopoly.gatuklasser;
+using static Monopoly.GoToJail;
 
 namespace Monopoly
 {
     public class Movement : MonoBehaviour
     {
         public List<Player> players;
-        private List<int> routePositions;
+        public List<int> routePositions;
         private List<Vector3> initialPositions;
         public Route currentRoute;
-        private int currentPlayerIndex = 0;
+        public int currentPlayerIndex = 0;
         private bool isMoving;
         public int steps;
         public Buy buyScript;
         public GoSquare goSquare;
+        public GoToJailSquare jailSquare ;
+
 
 
         void Start()
@@ -33,6 +36,7 @@ namespace Monopoly
             }
 
             goSquare = new GoSquare("Go");
+            //jailSquare = new GoToJailSquare("Gå i fängelse");
         }
 
         public void StartPlayerMovement()
@@ -77,14 +81,8 @@ namespace Monopoly
 
                     Vector3 nextPos = currentRoute.childNodeList[routePositions[currentPlayerIndex]].position;
 
-                    if (nextPos == currentRoute.childNodeList[0].position)
-                    {
-                        goSquare.HandleGo(currentPlayer);
-                    }
-                    if (nextPos == currentRoute.childNodeList[24].position)
-                    {
-                        Debug.Log("Teast fängelse");
-                    }
+                    
+
 
 
                     while (MoveToNextNode(currentPlayer.transform, nextPos))
@@ -95,6 +93,17 @@ namespace Monopoly
                     yield return new WaitForSeconds(0.1f);
                     steps--;
 
+                    if (nextPos == currentRoute.childNodeList[0].position)
+                    {
+                        goSquare.HandleGo(currentPlayer);
+                       
+                    }
+                    if (nextPos == currentRoute.childNodeList[24].position)
+                    {
+                        Debug.Log("Du hmanar i fängelse");
+
+                        Transform stoppedNode = currentRoute.childNodeList[routePositions[8]];
+                    }
                     if (steps == 0)
                     {
                         Transform stoppedNode = currentRoute.childNodeList[routePositions[currentPlayerIndex]];
