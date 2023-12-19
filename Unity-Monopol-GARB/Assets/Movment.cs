@@ -71,7 +71,7 @@ namespace Monopoly
             }
             else
             {
-                steps = 24; //Random.Range(1, 7);
+                steps = Random.Range(1, 7);
                 Debug.Log($"{currentPlayer.playerName} rullade {steps}");
 
                 while (steps > 0)
@@ -90,7 +90,7 @@ namespace Monopoly
                         yield return null;
                     }
 
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0f);
                     steps--;
 
                     if (nextPos == currentRoute.childNodeList[0].position)
@@ -98,12 +98,12 @@ namespace Monopoly
                         goSquare.HandleGo(currentPlayer);
                        
                     }
-                    if (nextPos == currentRoute.childNodeList[24].position)
-                    {
-                        Debug.Log("Du hmanar i fängelse");
+                    //if (nextPos == currentRoute.childNodeList[24].position)
+                    //{
+                      //  Debug.Log("Du hmanar i fängelse");
 
-                        Transform stoppedNode = currentRoute.childNodeList[routePositions[8]];
-                    }
+                      //  Transform stoppedNode = currentRoute.childNodeList[routePositions[8]];
+                    //}
                     if (steps == 0)
                     {
                         Transform stoppedNode = currentRoute.childNodeList[routePositions[currentPlayerIndex]];

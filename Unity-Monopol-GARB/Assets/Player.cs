@@ -34,14 +34,14 @@ namespace Monopoly
         public void DeductCash(int amount)
         {
             cash -= amount;
-            Debug.Log($"{playerName} deducted {amount} cash. Remaining cash: {cash}");
+            Debug.Log($"{playerName} betalade {amount} kr. Pengar kvar: {cash}");
             // skapa koll om spelaren har tillräckligt med pengar senare
         }
 
         public void AddCash(int amount)
         {
             cash += amount;
-            Debug.Log($"{playerName} deducted {amount} cash. Remaining cash: {cash}");
+            Debug.Log($"{playerName} betalade {amount} kr. Pengar kvar: {cash}");
         }
 
         public void ResetToStart()
@@ -66,14 +66,14 @@ namespace Monopoly
         public void AddMoney(int amount)
         {
             cash += amount;
-            Debug.Log($"{playerName} received {amount} money. New cash balance: {cash}");
+            Debug.Log($"{playerName} tog emot {amount} kr. Har nu: {cash} kr");
         }
 
         public void MoveForward(int steps)
         {
             // Implementera logik för att flytta spelaren framåt med det angivna antalet steg
             // Exempel: transform.Translate(Vector3.forward * steps);
-            Debug.Log($"{playerName} moved forward {steps} steps.");
+            Debug.Log($"{playerName}  gick framåt {steps} steg.");
         }
 
         public void MoveToJail()

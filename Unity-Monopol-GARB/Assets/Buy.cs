@@ -40,7 +40,7 @@ namespace Monopoly
                     }
                     else
                     {
-                        Debug.Log("Street is owned by: " + owner.playerName + ". Pay rent.");
+                        Debug.Log("Gatan är ägd av: " + owner.playerName + ". Betala hyra.");
                     }
                 }
             }
@@ -69,7 +69,7 @@ namespace Monopoly
 
         public void HandelBetalaHyra()
         {
-            Debug.Log("Pressed Betala");
+            Debug.Log("Tryckte betala");
 
             Street streetComponent = currentStreet.GetComponent<Street>();
             if (streetComponent != null && streetComponent.Owner != null)
@@ -80,7 +80,7 @@ namespace Monopoly
                 currentPlayer.GetComponent<Player>().DeductCash(rentAmount);
                 owner.AddCash(rentAmount);
 
-                Debug.Log($"{currentPlayer.GetComponent<Player>().playerName} paid {rentAmount} rent to {owner.playerName}.");
+                Debug.Log($"{currentPlayer.GetComponent<Player>().playerName} betalade {rentAmount} hyra till {owner.playerName}.");
             }
 
             CloseRentWindow();
