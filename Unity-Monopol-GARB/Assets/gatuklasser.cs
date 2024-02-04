@@ -16,11 +16,6 @@ namespace Monopoly
                 Name = name;
                 Cost = cost;
             }
-
-            public virtual void LandOn(Player player)
-            {
-                // Implementera logik för när en spelare landar på gatan
-            }
         }
 
         public class SpecialSquare : Street
@@ -64,7 +59,6 @@ namespace Monopoly
 
             public override void PerformAction(Player player)
             {
-                // Implementera specifika åtgärder för Chans
                 // Exempel: Spelaren drar ett slumpmässigt "Chans"-kort och agerar baserat på kortet
                 Card drawnCard = chanceDeck.DrawRandomCard();
                 drawnCard.Execute(player);
@@ -182,7 +176,7 @@ namespace Monopoly
         {
             public GoSquare(string name)
             {
-                // Anpassade inställningar för Gå-rutan
+
             }
 
             public int goReward = 200; // Antal pengar spelaren får när de passerar Gå-rutan
@@ -202,12 +196,11 @@ namespace Monopoly
         {
             public FreeParkingSquare(string name)
             {
-                // Anpassade inställningar för Fri parkering-rutan
+
             }
 
-            public  void LandOn(Player player)
+            public void LandOn(Player player)
             {
-                LandOn(player);
                 // Ingenting händer på Fri parkering
             }
         }
